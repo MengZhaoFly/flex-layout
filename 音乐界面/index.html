@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./font/iconfont.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        img{
+            width: 177px;
+            height: 177px;
+        }
+        body {
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .main {
+            flex: 1 0 auto;
+            background-color: #fff;
+            display: flex;
+        }
+        
+        footer {
+            flex: 0 1 90px;
+            background-color: #36CFD5;
+        }
+        
+        .main {
+            display: -webkit-flex;
+            display: flex;
+            flex-direction: row;
+        }
+        
+        .main .left {
+            flex: 0 0 40px;
+            background-color: #f2f2f2;
+            display: flex;
+            flex-direction: column;
+            -ms-align-items: center;
+            align-items: center;
+            justify-content: space-around;
+        }
+        
+        .main .right {
+            flex: 1 0 auto;
+            display: flex;
+            flex-direction: column;
+        }
+        /*左侧栏*/
+        
+        .main .left iconfont {
+            flex: 1;
+            font-size: 1.2rem;
+        }
+        /*专辑封面*/
+        .right .topc {
+            flex: 0 0 180px;
+            display: flex;
+            flex-direction: row;
+            background-color: #4AB7E2;
+            padding: 20px;
+
+        }
+        /*专辑介绍*/
+        .catty-music{
+            flex: 1 0 auto;
+            display: flex;
+            flex-direction: column;
+            padding-left: 60px;
+
+        }
+        .catty-music div:first-child{
+            flex: 1 0 auto;
+
+        }
+        .catty-music div:first-child p{
+            line-height: 33px;
+        }
+        .catty-music div:first-child p:nth-child(1){
+           font-size: 20px;
+        }
+        .catty-music div:last-child{
+            flex: 0 0 25%;
+        }
+         .catty-music div:last-child .iconfont+.iconfont{
+            padding-left: 100px;
+         }
+        /*歌曲列表*/
+        .right .bottc{
+            flex: 1 0 auto;
+            /*align-items: center;*/
+            /*justify-content: center;
+            align-items: center;*/
+        }
+        .right .bottc  {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            
+        }
+        /*li设为flex 每个p都会自动浮起来*/
+        .right .bottc  li {
+            padding:0 25px;
+            display: flex;
+            min-height: 50px;
+            
+        }
+        .right .bottc  li:nth-child(2n){
+            background-color: #E1E2E4;
+        }
+        /*在一行上 每个p占据25%*/
+        .right .bottc  li p {
+            flex: 0 0 25%;
+            line-height: 50px;
+        }
+        /*底部*/
+        .footer{
+            display: -webkit-flex;
+            display: flex;
+
+        }
+         .footer .img{
+            flex: 1 1 auto;
+
+         }
+         .footer .operation{
+             flex: 2 0 auto;
+             display: flex;
+            align-items: center;
+         }
+         .footer .operation .iconfont{
+             flex: 1;
+         }
+    </style>
+</head>
+
+<body>
+    <section class="main">
+        <div class="left">
+            <i class="iconfont icon-category"></i>
+            <i class="iconfont icon-homeline"></i>
+            <i class="iconfont icon-search"></i>
+            <i class="iconfont icon-bofang"></i>
+            <i class="iconfont icon-expression"></i>
+            <i class="iconfont icon-wifi"></i>
+            <i class="iconfont icon-setting"></i>
+            <i class="iconfont icon-shapejourney2"></i>
+        </div>
+        <div class="right">
+            <div class="topc">
+                <img src="./pic.jpg" alt="">
+                <div class="catty-music">
+                    <div>
+                        <p> 山丘 一首千万不要自己一个人在午夜听的歌。</p>
+                        <p>李宗盛</p>
+                        <p>2013-07-06 山丘</p>
+                    </div>
+                    <div>
+                        <i class="iconfont icon-bofang">播放</i>
+                        <i class="iconfont icon-tianjia">添加</i>
+                        <i class="iconfont icon-gengduo">更多</i>
+                    </div>
+                </div>
+            </div>
+            <div class="bottc">
+                    <li>
+                        <p>漂洋过海来看你</p>
+                        <p>李宗盛</p>
+                        <p>2:30</p>
+                        <p>抒情</p>
+                    </li>
+                    <li>
+                        <p>当爱已成往事</p>
+                        <p>李宗盛</p>
+                        <p>3:40</p>
+                        <p>抒情</p>
+                    </li>
+                    <li>
+                        <p>山丘</p>
+                        <p>李宗盛</p>
+                        <p>3:00</p>
+                        <p>抒情</p>
+                    </li>
+                    <li>
+                        <p>领悟</p>
+                        <p>辛晓琪</p>
+                        <p>4:00</p>
+                        <p>抒情</p>
+                    </li>
+            </div>
+        </div>
+
+
+
+    </section>
+    <footer class="footer">
+        <div class="img">
+            <img src="./pic.jpg" alt="">
+        </div>
+        <div class="operation">
+            <i class="iconfont icon-back"></i>
+            <i class="iconfont icon-zanting"></i>
+            <i class="iconfont icon-play_2"></i>
+
+            <i class="iconfont icon-refresh"></i>
+            <i class="iconfont icon-expression"></i>
+        </div>
+
+
+    </footer>
+</body>
+
+</html>
